@@ -690,3 +690,38 @@ body:not(.home) .brand-text strong {
     padding: 26px;
   }
 }
+
+
+/* --- AJUSTES PARA EL WIDGET DE INSTAGRAM --- */
+
+/* Aseguramos que el contenedor de la sección sea oscuro */
+.instagram-section {
+    background-color: var(--bg);
+}
+
+/* Forzamos que el fondo del widget sea transparente o negro profundo */
+.sk-instagram-feed, 
+.sk_instagram_feed_container {
+    background-color: transparent !important;
+}
+
+/* Si las imágenes no se ven, es posible que el widget use filtros 
+   o capas de superposición. Esto asegura que los enlaces y fotos sean visibles.
+*/
+.sk-instagram-feed a, 
+.sk-instagram-feed img {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Estilo para que el texto del widget (si existe) sea legible en tu fondo negro */
+.sk-instagram-feed .sk_ig_grid_item_text,
+.sk-instagram-feed .sk_ig_load_more_btn {
+    color: var(--text) !important;
+}
+
+/* Opcional: Si quieres que las fotos tengan un borde sutil como tus paneles */
+.sk-instagram-feed .sk_ig_grid_item {
+    border: 1px solid var(--line) !important;
+    background: var(--surface) !important;
+}
